@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "AutoFill Extension",
+  "version": "1.0",
+  "description": "Automatically fills login form on Example Website.",
+  "permissions": ["activeTab", "storage","declarativeContent"],
+  "action":{
+	"default_popup": "popup/popup.html"},
+
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker":"background.js"
+  }
+}
+  
+  
